@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>
+        Grade Calculator
+    </title>
+    <script>
+
+        var marks_average;
+
+        function gradeCalc() {
+            var maths = parseInt(prompt("Please enter the maths mark."));
+            var physics = parseInt(prompt("Please enter the physics mark."));
+            var chemistry = parseInt(prompt("Please enter the chemistry mark."));
+            var result;
+
+            var average = (maths + physics + chemistry) / 3;
+
+            if (average < 70) {
+                result = "Result: student approved - Grade C";
+            } else if (average >= 70 && average < 90) {
+                result = "Result: student approved - Grade B";
+            } else {
+                result = "Result: student approved - Grade A";
+            }
+
+            return result;
+        }
+
+        marks_average = gradeCalc();
+        document.write(marks_average);
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>
+        Error Handling
+    </title>
+    <script>
+
+        //executar esta função que não foi declarada, vai dar erro, e travar a execução do resto do programa
+        //mas se colocar dentro do try catch block, não!
+        addTwoNumbers();
+
+        try {
+            addTwoNumbers();
+        } catch (obj) {
+            document.write(obj.message);
+        }
+
+        document.write("<br> After the errors! <br>");
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

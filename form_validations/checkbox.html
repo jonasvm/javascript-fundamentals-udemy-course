@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>
+        Form Validation Check Boxes
+    </title>
+    <script>
+
+        function validate() {
+
+            var valid = false;
+
+            if (document.getElementById("javascript").checked) {
+                valid = true;
+            }
+            else if (document.getElementById("jquery").checked) {
+                valid = true;
+            }
+            else if (document.getElementById("angularjs").checked) {
+                valid = true;
+            }
+            else if (document.getElementById("nodejs").checked) {
+                valid = true;
+            }
+
+            if (valid) {
+                alert("Validation Successful!");
+                return true;
+            } else {
+                alert("Please select at least one technology!");
+                return false;
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <h3>Select a technology</h3>
+    <form name="myform" action="checkbox.jsp" onsubmit="return validate()">
+
+        <input type="checkbox" id="javascript" value="Javascript"> JavaScript
+        <input type="checkbox" id="jquery" value="Jquery"> JQuery
+        <input type="checkbox" id="angularjs" value="Angularjs"> Angular JS
+        <input type="checkbox" id="nodejs" value="Nodejs"> Node JS
+
+        <input type="submit" name="Submit" />
+    </form>
+
+</body>
+
+</html>

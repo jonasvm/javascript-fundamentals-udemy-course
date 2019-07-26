@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>
+        Loop Assignment
+    </title>
+    <script>
+        var n = parseInt(prompt("Enter a number"));
+        var multiple;
+        var i;
+
+       document.write("Using te for loop <br>");
+        for (i = 1; i <= n; i++) {
+            multiple = i % 3;
+            if (multiple === 0) {
+                continue;
+            }
+            document.write("Number is " + i + "<br>");
+        } 
+
+       /*  document.write("<br> Using te While Loop <br>");
+        i = 1;
+        while (i <= n) {
+            multiple = i % 3;
+            if (multiple === 0) {
+                continue;
+            }
+            document.write("Number is " + i + "<br>");
+            i++;
+        }
+
+       document.write("<br> Using the Do While Loop");
+        i = 1;
+        do {
+            multiple = i % 3;
+            if (multiple === 0) {
+                continue;
+            }
+            document.write("Number is " + i + "<br>");
+            i++;
+
+        } while (i <= n); */
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

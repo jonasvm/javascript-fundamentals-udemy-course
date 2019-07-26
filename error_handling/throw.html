@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>
+        Throw
+    </title>
+    <script>
+
+        function validateAge() {
+
+            try {
+
+                var x = document.getElementById("age").value;
+
+                if (x == "") {
+                    throw "Age cannot be empty!";
+                } else if (x < 18) {
+                    throw "Too youg to vote!";
+                } else {
+                    document.getElementById("errorinfo").innerHTML = "You have age to vote!";
+                }
+
+            } catch (obj) {
+                document.getElementById("errorinfo").innerHTML = obj;
+            }finally{
+                //o bloco finally vai ser executado sempre, haja erro ou não
+                //é um bom lugar para limpar ou desalocar recursos usados no programa
+                document.getElementById("finallyinfo").innerHTML = "Inside Finally";
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+    Age: <input type="text" id="age" />
+    <input type="button" onclick="validateAge()" value="Validate" />
+    <p id="errorinfo"></p>
+    <p id="finallyinfo"></p>
+</body>
+
+</html>

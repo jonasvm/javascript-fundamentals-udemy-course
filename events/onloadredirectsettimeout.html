@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>
+        On Load Redirect Set Timeout
+    </title>
+    <script>
+
+        function waitForFiveSeconds() {
+            setTimeout(redirect, 5000);
+        }
+
+        function redirect() {
+            window.location = "http://www.github.com";  //vai mandar imprimir na impressora
+        }
+
+
+    </script>
+</head>
+
+<body onload="redirect()">
+
+    <b>Redirecting in three seconds . . . </b>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>
+        On Mouse Up / On Mouse Down Assignment
+    </title>
+    <script>
+        function handleMouseUpEvent(x) {
+            x.style.color = "red";
+            x.style.backgroundColor = "yellow";
+            x.innerHTML = "MOUSE-UP";
+        }
+        function handleMouseDownEvent(x) {
+            x.style.color = "yellow";
+            x.style.backgroundColor = "blue";
+            x.innerHTML = "MOUSE-DOWN";
+        }
+    </script>
+</head>
+
+<body>
+
+    <marquee onmouseup="handleMouseUpEvent(this)" onmousedown="handleMouseDownEvent(this)">Start/Stop</marquee>
+    
+</body>
+
+</html>

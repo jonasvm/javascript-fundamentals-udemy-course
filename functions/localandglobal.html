@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <title>
+        Local and Global
+    </title>
+    <script>
+        var y = 30;
+
+        function fun1() {
+            var x = 20; //local variable for function 1
+            document.write("Inside fun1 X: " + x + "<br>");
+            document.write("Inside fun1 y: " + y + "<br>");
+        }
+
+        function fun2() {
+            var a = 220; //local variable for function 2
+            document.write("Inside fun2 A: " + a + "<br>");
+            document.write("Inside fun1 y: " + y + "<br>");
+        }
+
+        fun1();
+        fun2();
+
+        document.write("Outside fun1 y: " + y + "<br>");
+        document.write("Inside fun1 X: " + x + "<br>"); //will not be displayed
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

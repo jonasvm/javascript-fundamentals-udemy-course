@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>
+        On Change Images
+    </title>
+    <script>
+        function handleOnChangeEvent(x) {
+            document.body.style.backgroundImage = "url('"+x+"')"; //este url com as aspas é a manha para funcionar
+                                                                //sem isto, a função não funciona
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <select onchange="handleOnChangeEvent(this.value)">
+        <option value="">Select a image</option>
+        <option value="images/dd1.jpg">D&D Wallpaper 1</option>
+        <option value="images/dd2.jpg">D&D Wallpaper 2</option>
+        <option value="images/dd3.jpg">D&D Wallpaper 3</option>
+    </select>
+
+</body>
+
+</html>
