@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>
+        Product Page Assignment
+    </title>
+    <script>
+
+        var blogPost = new function () {
+
+            this.id = "0001";
+            this.name = "JavaScript Book";
+            this.description = "Rapid web development";
+            this.price = "100";
+
+            this.calculateDisc = function (percentage) {
+                return (this.price - (this.price * (percentage / 100)));
+            }
+
+            this.displayProductDetails = function () {
+                document.write("Product name: " + this.name + "<br>")
+                document.write("Product description: " + this.description + "<br>")
+                document.write("Product price (with discount): " + this.calculateDisc(10));
+            }
+        }
+
+        blogPost.displayProductDetails();
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

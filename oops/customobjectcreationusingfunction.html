@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>
+        Custom Body Creation using Function
+    </title>
+    <script>
+
+        function blogPost(title, text) {
+            this.title = title;
+            this.text = text;
+            this.addCategory = addCategory;
+            this.displayBlogPost = displayBlogPost;
+        }
+
+        //é melhor definir a função fora e atribuir ao objeto  this.addCategory = addCategory;
+        function addCategory(category) {
+            this.category = category;
+        }
+
+        function displayBlogPost() {
+            document.write(this.title + "<br>");
+            document.write(this.text + "<br>");
+            document.write(this.category + "<br>");
+        }
+
+        var bp1 = new blogPost("JQuery", "Makes JS Easier to use!");
+        bp1.addCategory("UI Technology");
+        bp1.displayBlogPost();
+
+        var bp2 = new blogPost("Angular JS", "To build single page apps!");
+        bp2.addCategory("UI Advanced Technology");
+        bp2.displayBlogPost();
+
+        /* document.write(bp1.title + "<br>");
+        document.write(bp1.text + "<br>");
+        document.write(bp1.category + "<br>");
+
+        document.write(bp2.title + "<br>");
+        document.write(bp2.text + "<br>");
+        document.write(bp2.category + "<br>"); */
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

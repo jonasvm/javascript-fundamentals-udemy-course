@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <title>
+        User Registration Assignment
+    </title>
+    <script>
+
+        function validate() {
+
+            var email = document.myform.email.value;
+            var password = document.myform.password.value;
+            var phone = document.myform.phone.value;
+
+            var expMail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Z-a-z]{2,4})$/;
+            var expPassword = /^[A-Za-z0-9\s]{5,8}$/;
+            var expPhone = /^[0-9\s]{10}$/;
+
+            var resultMail = expMail.test(email);
+            var resultPassword = expPassword.test(password);
+            var resultPhone = expPhone.test(phone);
+
+            if (email == "") {
+                alert("Email is mandatory!");
+                document.myform.email.focus();
+                return false;
+            } else if (!resultMail) {
+                alert("Email format is not correct!");
+                document.myform.email.focus();
+                return false;
+            } else if (password == "") {
+                alert("Password is mandatory!");
+                document.myform.password.focus();
+                return false;
+            } else if (!resultPassword) {
+                alert("Password must be alphanumeric!");
+                document.myform.password.focus();
+                return false;
+            } else if (phone == "") {
+                alert("Phone is mandatory!");
+                document.myform.phone.focus();
+                return false;
+            } else if (!resultPhone) {
+                alert("Phone must be numeric!");
+                document.myform.phone.focus();
+                return false;
+            } else {
+                alert("Validation Successfull!");
+                return true;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <h3>User Registration</h3>
+    <form name="myform" action="checkbox.jsp" onsubmit="return validate()">
+
+        Email <input type="text" name="email"><br>
+        Password <input type="password" name="password"><br>
+        Phone <input type="text" name="phone"><br>
+        <input type="submit" name="Register" />
+
+    </form>
+
+</body>
+
+</html>

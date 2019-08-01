@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>
+        Form Validation Text Area Validation with Regex
+    </title>
+    <script>
+
+        function validate() {
+
+            //var exp = /^[A-Za-z0-9\s]+$/; //o +$ significa um ou qualquer número de [...]
+            var exp = /^[A-Za-z0-9\s]{3,10}$/; //o {} significa entre 3 e 10 números [...]
+            var userAddress = document.myform.address.value;
+            var result = exp.test(userAddress);
+
+            if(result){
+                alert("Validation Successful!");
+            }else{
+                document.getElementById("err").innerHTML = "Please enter alpha numeric values only!"
+                document.myform.address.focus();
+                return false;
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <h3>User Registration</h3>
+    <form name="myform" action="checkbox.jsp" onsubmit="return validate()">
+
+       Address <textarea name="address"></textarea>
+       <b id="err"></b><br>
+
+        <input type="submit" name="Submit" />
+    </form>
+
+</body>
+
+</html>
